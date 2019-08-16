@@ -1,9 +1,15 @@
 <template lang="html">
-  <h2>Project</h2>
+  <div>
+    <h2>Project</h2>
+
+    <p>{{projects[0].name}}</p>
+  </div>
 
 </template>
 
 <script>
+import ProjectService from './services/ProjectService.js';
+
 export default {
   name: 'app',
   data() {
@@ -11,9 +17,9 @@ export default {
       projects: []
     }
   },
-  components: {
-    'projects-slide': ProjectsSlide
-  },
+  // components: {
+  //   'projects-slide': ProjectsSlide
+  // },
   mounted() {
   this.fetchData();
 },
