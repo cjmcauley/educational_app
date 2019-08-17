@@ -1,21 +1,21 @@
 <template lang="html">
   <div>
-    <home-nav />
-
+ <web-header />
+    <router-view ></router-view>
   </div>
 
 </template>
 
 <script>
 import ProjectService from './services/ProjectService.js';
-import HomeNavigation from './components/HomeNavigation.vue';
+import Header from './components/Header.vue';
 
 export default {
   name: 'app',
   components: {
-    'home-nav': HomeNavigation
+    'web-header': Header
   }
-}
+  }
 </script>
 
 <style lang="css">

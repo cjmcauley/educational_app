@@ -2,7 +2,7 @@
 
   <div >
     <h1>Projects</h1>
-    <!-- <project-grid /> -->
+    <project-grid />
     <router-view id="projects"></router-view>
 
   </div>
