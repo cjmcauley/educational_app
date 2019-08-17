@@ -17,7 +17,6 @@
         <router-link :to="{ name: 'projects', params: { filter: 'not-edible' } }">Not-edible</router-link>
       </div>
     </div>
-
   </div>
 </template>
 

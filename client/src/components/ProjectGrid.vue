@@ -31,4 +31,9 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+.grid {
+  display: flex;  
+}
+
 </style>
