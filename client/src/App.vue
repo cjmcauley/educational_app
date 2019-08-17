@@ -17,19 +17,16 @@ export default {
       projects: []
     }
   },
-  // components: {
-  //   'projects-slide': ProjectsSlide
-  // },
   mounted() {
-  this.fetchData();
-},
-methods: {
-  fetchData() {
-    ProjectService.getProject()
-    .then(projects => this.projects = projects)
-  }}
-}
-</script>
+    this.fetchData();
+  },
+  methods: {
+    fetchData() {
+      ProjectService.getProject()
+      .then(projects => this.projects = projects)
+    }}
+  }
+  </script>
 
-<style lang="css">
-</style>
+  <style lang="css">
+  </style>
