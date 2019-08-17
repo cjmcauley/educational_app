@@ -2,7 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import App from '@/App.vue';
 import Projects from '@/views/Projects.vue';
-import Slider from '@/views/Slider.vue';
+// import Slider from '@/views/Slider.vue';
 
 Vue.use(Router)
 
@@ -14,15 +14,15 @@ const router = new Router({
       component: App
     },
     {
-      path: '/projects',
+      path: '/projects/:filter',
       name: 'projects',
       component: Projects
-    },
-    {
-      path: '/projects/:id',
-      name: 'instructions',
-      component: Slider
     }
+    // {
+    //   path: '/projects/:id',
+    //   name: 'instructions',
+    //   component: Slider
+    // }
   ]
 })
 

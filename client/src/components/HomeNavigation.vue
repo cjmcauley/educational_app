@@ -5,16 +5,16 @@
     <div class="wrapper">
 
       <div class="indoor">
-        Indoor
+        <router-link :to="{ name: 'projects', params: { filter: 'indoor' } }">Indoor</router-link>
       </div>
       <div class="outdoor">
-        Outdoor
+        <router-link :to="{ name: 'projects', params: { filter: 'outdoor' } }">Outdoor</router-link>
       </div>
       <div class="edible">
-        Edible
+        <router-link :to="{ name: 'projects', params: { filter: 'edible' } }">Edible</router-link>
       </div>
       <div class="not-edible">
-        Not-edible
+        <router-link :to="{ name: 'projects', params: { filter: 'not-edible' } }">Not-edible</router-link>
       </div>
     </div>
 
