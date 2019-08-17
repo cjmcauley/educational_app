@@ -1,6 +1,7 @@
 <template lang="html">
   <div>
     <home-nav />
+    <project-grid />
 
   </div>
 
@@ -9,27 +10,16 @@
 <script>
 import ProjectService from './services/ProjectService.js';
 import HomeNavigation from './components/HomeNavigation.vue';
+import ProjectGrid from './components/ProjectGrid.vue';
 
 export default {
   name: 'app',
   components: {
-    'home-nav': HomeNavigation
-  },
-  data() {
-    return {
-      projects: []
-    }
-  },
-  mounted() {
-    this.fetchData();
-  },
-  methods: {
-    fetchData() {
-      ProjectService.getProject()
-      .then(projects => this.projects = projects)
-    }}
+    'home-nav': HomeNavigation,
+    'project-grid': ProjectGrid
   }
-  </script>
+}
+</script>
 
-  <style lang="css">
-  </style>
+<style lang="css">
+</style>
