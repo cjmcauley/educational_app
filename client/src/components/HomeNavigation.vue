@@ -23,14 +23,17 @@
 
 <script>
 export default {
+  name: 'home-nav'
 }
 </script>
 
 <style lang="css" scoped>
 .wrapper {
+  width: 60%;
+  padding-top: 40px;
   display: grid;
+  margin: 0 auto;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
-  
 }
 </style>

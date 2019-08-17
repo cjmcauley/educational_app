@@ -1,17 +1,20 @@
 <template lang="html">
   <div>
-    <h2>Project</h2>
+    <home-nav />
 
-    <p>{{projects[0].name}}</p>
   </div>
 
 </template>
 
 <script>
 import ProjectService from './services/ProjectService.js';
+import HomeNavigation from './components/HomeNavigation.vue';
 
 export default {
   name: 'app',
+  components: {
+    'home-nav': HomeNavigation
+  },
   data() {
     return {
       projects: []
