@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-<h1>Header</h1>
+<h1>Instructions</h1>
 
   </div>
 
@@ -11,6 +11,11 @@ import ProjectGrid from './ProjectGrid.vue'
 
 export default {
   name: 'instructions',
+  data () {
+    return {
+      project: null
+    }
+  },
   props: ['projectSelected'],
   components: {
     'project-grid': ProjectGrid

@@ -1,6 +1,8 @@
 <template lang="html">
   <div class="grid">
+
     <project-card v-for="(project, index) in projects" :key="index" :project="project" />
+
   </div>
 </template>
 

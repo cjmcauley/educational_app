@@ -1,7 +1,6 @@
 <template lang="html">
   <div>
 
-  <h1>Instructions</h1>
   <project-slide ></project-slide>
 </div>
 </template>

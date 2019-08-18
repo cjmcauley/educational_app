@@ -1,42 +1,37 @@
 <template lang="html">
   <div>
-
     <div v-if="$route.params.filter === 'indoor'">
       <div v-if="this.project.indoor === true" class="project-card" @click="handleClick">
+        <router-link :to="{ name: 'instructions'}">
         <h3>{{ project.commonName}}</h3>
         <p>Season: {{ project.growingSeason }}</p>
         <p>Grow Time: {{ project.growTime }}</p>
+        </router-link>
       </div>
-
     </div>
+
     <div v-if="$route.params.filter === 'outdoor'">
-      <a href="#">
-      <div v-if="this.project.indoor === false" class="project-card">
+      <div v-if="this.project.indoor === false" class="project-card" @click="handleClick">
         <h3>{{ project.commonName}}</h3>
         <p>Season: {{ project.growingSeason }}</p>
         <p>Grow Time: {{ project.growTime }}</p>
       </div>
-    </a>
 
     </div>
     <div v-if="$route.params.filter === 'edible'">
-      <a href="#">
-      <div v-if="this.project.edible === true" class="project-card">
+      <div v-if="this.project.edible === true" class="project-card" @click="handleClick">
         <h3>{{ project.commonName}}</h3>
         <p>Season: {{ project.growingSeason }}</p>
         <p>Grow Time: {{ project.growTime }}</p>
       </div>
-    </a>
 
     </div>
     <div v-if="$route.params.filter === 'not-edible'">
-      <a href="#">
-      <div v-if="this.project.edible === false" class="project-card">
+      <div v-if="this.project.edible === false" class="project-card" @click="handleClick">
         <h3>{{ project.commonName}}</h3>
         <p>Season: {{ project.growingSeason }}</p>
         <p>Grow Time: {{ project.growTime }}</p>
       </div>
-    </a>
 
     </div>
   </div>
@@ -46,6 +41,7 @@
 
 <script>
 import { eventBus } from '../main.js'
+import Router from 'vue-router';
 import ProjectService from '../services/ProjectService.js'
 
 export default {
@@ -56,21 +52,22 @@ export default {
     }
   },
   props: ['project'],
+  components: {
+    'router': Router
+  },
   methods: {
     handleClick() {
-       eventBus.$emit('project-selected', this.project)
-
+      eventBus.$emit('project-selected', this.project)}
     }
   }
-}
-</script>
+  </script>
 
-<style lang="css" scoped>
+  <style lang="css" scoped>
 
-.project-card {
-  background-color: #7FCBB0;
-  padding: 5px;
-  margin: 5px;
-}
+    .project-card {
+      background-color: #7FCBB0;
+      padding: 5px;
+      margin: 5px;
+    }
 
-</style>
+  </style>
