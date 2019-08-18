@@ -59,6 +59,7 @@ export default {
   methods: {
     handleClick() {
        eventBus.$emit('project-selected', this.project)
+
     }
   }
 }

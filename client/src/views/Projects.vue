@@ -13,7 +13,7 @@
 import ProjectGrid from '../components/ProjectGrid.vue';
 
 export default {
-  name: 'projects',
+  name: 'project',
   components: {
     'project-grid': ProjectGrid
   }

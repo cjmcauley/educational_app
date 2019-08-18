@@ -20,7 +20,7 @@ const router = new Router({
       component: Projects
     },
     {
-      path: '/projects/instructions',
+      path: '/instructions',
       name: 'instructions',
       component: Slider
     }
