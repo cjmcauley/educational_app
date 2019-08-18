@@ -12,7 +12,8 @@ import ProjectCard from './ProjectCard.vue'
 export default {
   data(){
     return{
-      projects: []
+      projects: [],
+      projectSelected: null
     };
   },
   components: {
@@ -20,6 +21,10 @@ export default {
   },
   mounted() {
     this.fetchData();
+
+    eventBus.$on('project-selected', (project) => {
+      this.projectSelected = project
+    })
   },
   methods: {
     fetchData() {
@@ -32,8 +37,8 @@ export default {
 
 <style lang="css" scoped>
 
-.grid {
-  display: flex;  
-}
+  .grid {
+    display: flex;
+  }
 
 </style>

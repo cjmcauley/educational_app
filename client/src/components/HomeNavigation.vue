@@ -1,7 +1,7 @@
 <template lang="html">
   <div>
-    <h1>App Name</h1>
-    <p>some text about the app and plants and kids and whatnot</p>
+    <h1 align="center">App Name</h1>
+    <p align="center">some text about the app and plants and kids and whatnot</p>
     <div class="wrapper">
 
       <div class="indoor">

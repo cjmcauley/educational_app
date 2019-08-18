@@ -13,7 +13,9 @@ export default {
 <style lang="css" scoped>
 
 header{
-  background-color: red;
+  background-color: #E8B662;
+  padding: 20px 5px;
+  color: white;
 }
 
 </style>

@@ -2,7 +2,7 @@
   <div>
 
     <div v-if="$route.params.filter === 'indoor'">
-      <div v-if="this.project.indoor === true" class="project-card" @click="instructions">
+      <div v-if="this.project.indoor === true" class="project-card" @click="handleClick">
         <h3>{{ project.commonName}}</h3>
         <p>Season: {{ project.growingSeason }}</p>
         <p>Grow Time: {{ project.growTime }}</p>
@@ -57,10 +57,8 @@ export default {
   },
   props: ['project'],
   methods: {
-    instructions: function (event) {
-       event => this.project = info;
-      // return console.log('It works');
-
+    handleClick() {
+       eventBus.$emit('project-selected', this.project)
     }
   }
 }
@@ -69,7 +67,9 @@ export default {
 <style lang="css" scoped>
 
 .project-card {
-  border: 3px solid green;
+  background-color: #7FCBB0;
+  padding: 5px;
+  margin: 5px;
 }
 
 </style>
