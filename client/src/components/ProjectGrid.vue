@@ -23,12 +23,7 @@ export default {
   },
   mounted() {
     this.fetchData();
-
-    eventBus.$on('project-selected', (project) => {
-      this.projectSelected = project
-    }),
-    eventBus.$emit('project-instructions', this.projectSelected)
-  },
+},
   methods: {
     fetchData(){
       ProjectService.getProject()

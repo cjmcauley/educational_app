@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import { eventBus } from '../main.js'
 import ProjectGrid from './ProjectGrid.vue'
 
 export default {
@@ -21,7 +22,7 @@ export default {
     'project-grid': ProjectGrid
   },
   mounted (){
-    eventBus.$on('project-instructions', (project) => {this.project = project})
+    eventBus.$on('project-selected', (project) => {this.project = project})
   }
 }
 </script>
