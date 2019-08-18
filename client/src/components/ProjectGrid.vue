@@ -26,10 +26,11 @@ export default {
 
     eventBus.$on('project-selected', (project) => {
       this.projectSelected = project
-    })
+    }),
+    eventBus.$emit('project-instructions', this.projectSelected)
   },
   methods: {
-    fetchData() {
+    fetchData(){
       ProjectService.getProject()
       .then(projects => this.projects = projects);
     }
@@ -39,8 +40,8 @@ export default {
 
 <style lang="css" scoped>
 
-  .grid {
-    display: flex;
-  }
+.grid {
+  display: flex;
+}
 
 </style>

@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-<h1>Instructions</h1>
+    <h1>Instructions</h1>
 
   </div>
 
@@ -19,6 +19,9 @@ export default {
   props: ['projectSelected'],
   components: {
     'project-grid': ProjectGrid
+  },
+  mounted (){
+    eventBus.$on('project-instructions', (project) => {this.project = project})
   }
 }
 </script>
