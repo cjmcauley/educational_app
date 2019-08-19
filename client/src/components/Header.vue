@@ -1,8 +1,12 @@
 <template lang="html">
 <header>
-  <h1>Home</h1>
+
+  <router-link :to="{ name: 'home'}"><h1>Home</h1></router-link>
   <router-link :to="{ name: 'projects', params: { filter: 'favourite' } }">Favourites</router-link>
+  <router-link :to="{ name: 'projects', params: {filter: 'progress'} }">In progress</router-link>
 </header>
+
+
 </template>
 
 <script>
