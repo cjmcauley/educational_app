@@ -13,7 +13,7 @@
 
       <v-tab-item v-if="project !== null">
         <v-card flat>
-          <v-img class="slide-image" src="@/assets/Illustrations/Artboard5.png"></v-img>
+          <v-img class="slide-image" src="@/assets/Illustrations/Artboard10.png"></v-img>
           <v-card-text>
             <ul>
               <li v-if="project.steps[0][0]">{{ project.steps[0][0] }}</li>
