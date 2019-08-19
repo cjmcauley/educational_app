@@ -1,7 +1,7 @@
 <template lang="html">
-  <v-card>
+  <v-card v-if="project">
     <v-card-title>
-     <h1>How to grow your own {{ project.commonName }}</h1>
+     <h1 v-if="project.commonName">How to grow your own {{ project.commonName }}</h1>
    </v-card-title>
     <v-tabs v-model="tabs" background-color="transparent" centered>
       <v-tab v-for="header in headers" :key="header">
@@ -13,7 +13,7 @@
 
       <v-tab-item>
         <v-card flat>
-          <v-img src="@/assets/Illustrations/Artboard5.png"></v-img>
+          <v-img class="slide-image" src="@/assets/Illustrations/Artboard5.png"></v-img>
           <v-card-text>
             <ul>
               <li v-if="project.steps[0][0]">{{ project.steps[0][0] }}</li>
@@ -107,5 +107,10 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+.slide-image {
+  height: auto;
+  width: 40%;
+}
 
 </style>
