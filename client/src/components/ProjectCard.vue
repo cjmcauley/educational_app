@@ -7,7 +7,8 @@
           <p>Season: {{ project.growingSeason }}</p>
           <p>Grow Time: {{ project.growTime }}</p>
         </router-link>
-        <button type="button" name="favourite" @click="handleUpdate(project._id, project)">Add to Fav</button>
+        <button v-if="project.favourite === false" type="button" name="favourite" @click="handleUpdate(project._id, project)">Add to Fav</button>
+        <button v-if="project.favourite === true" type="button" name="favourite" @click="handleUpdate(project._id, project)">Remove from Fav</button>
         <button type="button" name="progress">In Progress</button>
       </div>
     </div>
@@ -19,6 +20,8 @@
           <p>Season: {{ project.growingSeason }}</p>
           <p>Grow Time: {{ project.growTime }}</p>
         </router-link>
+        <button v-if="project.favourite === false" type="button" name="favourite" @click="handleUpdate(project._id, project)">Add to Fav</button>
+        <button v-if="project.favourite === true" type="button" name="favourite" @click="handleUpdate(project._id, project)">Remove from Fav</button>
       </div>
     </div>
 
@@ -29,6 +32,8 @@
           <p>Season: {{ project.growingSeason }}</p>
           <p>Grow Time: {{ project.growTime }}</p>
         </router-link>
+        <button v-if="project.favourite === false" type="button" name="favourite" @click="handleUpdate(project._id, project)">Add to Fav</button>
+        <button v-if="project.favourite === true" type="button" name="favourite" @click="handleUpdate(project._id, project)">Remove from Fav</button>
       </div>
     </div>
 
@@ -39,6 +44,8 @@
           <p>Season: {{ project.growingSeason }}</p>
           <p>Grow Time: {{ project.growTime }}</p>
         </router-link>
+        <button v-if="project.favourite === false" type="button" name="favourite" @click="handleUpdate(project._id, project)">Add to Fav</button>
+        <button v-if="project.favourite === true" type="button" name="favourite" @click="handleUpdate(project._id, project)">Remove from Fav</button>
       </div>
     </div>
   </div>
