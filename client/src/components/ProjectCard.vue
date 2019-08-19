@@ -7,7 +7,7 @@
           <p>Season: {{ project.growingSeason }}</p>
           <p>Grow Time: {{ project.growTime }}</p>
         </router-link>
-        <button type="button" name="favourite" @click="addFavourite">Add to Fav</button>
+        <button type="button" name="favourite" @click="handleUpdate(project._id, project)">Add to Fav</button>
         <button type="button" name="progress">In Progress</button>
       </div>
     </div>
@@ -65,8 +65,9 @@ export default {
     handleClick() {
       eventBus.$emit('project-selected', this.project)
     },
-    addFavourite() {
-      eventBus.$emit('add-favourite', this.project)
+    handleUpdate(id, project) {
+      project.favourite = !project.favourite
+      ProjectService.updateProject(id, project)
     }
     }
   }

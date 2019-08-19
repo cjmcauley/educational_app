@@ -14,22 +14,9 @@ import ProjectCard from './components/ProjectCard.vue';
 
 export default {
   name: 'app',
-  data() {
-    return{
-      favourite: []
-    };
-  },
   components: {
     'web-header': Header,
     'project-card': ProjectCard
-  },
-
-  mounted() {
-
-    eventBus.$on('add-favourite', (project) => {
-      // if(this.favourite.indexOf(project) === -1)
-      this.favourite.push(project);
-    })
   }
 }
 </script>

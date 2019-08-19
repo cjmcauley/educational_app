@@ -4,5 +4,14 @@ export default {
   getProject(){
     return fetch(baseURL)
     .then(res => res.json())
+  },
+
+  updateProject(id, project){
+    return fetch(baseURL + id, {
+      method: "PATCH",
+      body: JSON.stringify(project),
+      headers: {"Content-Type": "application/json"}
+    })
+    .then(res => res.json)
   }
 }
