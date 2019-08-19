@@ -26,19 +26,6 @@ export default {
   mounted() {
     this.fetchData();
 
-//     if(localStorage.favourite) this.favourite = localStorage.favourite;
-//
-//     eventBus.$on('add-favourite', (project) => {
-//     if(this.favourite.indexOf(project) === -1)
-//     this.favourite.push(project);
-//     })
-//
-//     eventBus.$emit('share-favourite', this.favourite)
-// },
-// watch: {
-//   favourite(newFavourite) {
-//     localStorage.favourite = newFavourite;
-//   }
 },
   methods: {
     fetchData(){

@@ -76,6 +76,17 @@
         </v-card>
       </v-tab-item>
 
+      <v-tab-item>
+        <v-card flat>
+          <router-link :to="{ name: 'home'}">
+          <v-img class="last-slide-image" src="@/assets/elements/congrats.png"></v-img>
+        </router-link>
+          <v-card-text>
+            Congratulations !
+          </v-card-text>
+        </v-card>
+      </v-tab-item>
+
     </v-tabs-items>
   </v-card>
 
@@ -91,7 +102,7 @@ export default {
   data () {
     return {
       project: null,
-      headers: ['Before You Start', 'Step 1', 'Step 2', 'Step 3', 'Step 4', 'Step 5', 'Step 6' ],
+      headers: ['Before You Start', 'Step 1', 'Step 2', 'Step 3', 'Step 4', 'Step 5', 'Step 6', 'Step 7' ],
       tabs: null
     }
   },
@@ -110,6 +121,10 @@ export default {
 .slide-image {
   height: auto;
   width: 40%;
+}
+.last-slide-image {
+  width: 10%;
+  height: auto;
 }
 
 </style>
