@@ -1,5 +1,8 @@
 <template lang="html">
   <v-card>
+    <v-card-title>
+     <h1>How to grow your own {{ project.commonName }}</h1>
+   </v-card-title>
     <v-tabs v-model="tabs" background-color="transparent" centered>
       <v-tab v-for="header in headers" :key="header">
         {{ header }}
@@ -10,8 +13,18 @@
 
       <v-tab-item>
         <v-card flat>
+          <v-img src="@/assets/Illustrations/Artboard5.png"></v-img>
           <v-card-text>
-            {{ project.steps[0] }}
+            <ul>
+              <li v-if="project.steps[0][0]">{{ project.steps[0][0] }}</li>
+              <li v-if="project.steps[0][1]">{{ project.steps[0][1] }}</li>
+              <li v-if="project.steps[0][2]">{{ project.steps[0][2] }}</li>
+              <li v-if="project.steps[0][3]">{{ project.steps[0][3] }}</li>
+              <li v-if="project.steps[0][4]">{{ project.steps[0][4] }}</li>
+              <li v-if="project.steps[0][5]">{{ project.steps[0][5] }}</li>
+              <li v-if="project.steps[0][6]">{{ project.steps[0][6] }}</li>
+
+            </ul>
           </v-card-text>
         </v-card>
       </v-tab-item>
@@ -26,7 +39,7 @@
 
       <v-tab-item>
         <v-card flat>
-          <v-card-text>
+            <v-card-text>
             {{ project.steps[2] }}
           </v-card-text>
         </v-card>
@@ -79,7 +92,7 @@ export default {
   data () {
     return {
       project: [],
-      headers: [ 'Step 1', 'Step 2', 'Step 3', 'Step 4', 'Step 5', 'Step 6', 'Step 7' ],
+      headers: ['Before You Start', 'Step 1', 'Step 2', 'Step 3', 'Step 4', 'Step 5', 'Step 6' ],
       tabs: null
     }
   },
