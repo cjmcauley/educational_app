@@ -48,6 +48,19 @@
         <button v-if="project.favourite === true" type="button" name="favourite" @click="handleUpdate(project._id, project)">Remove from Fav</button>
       </div>
     </div>
+
+    <div v-if="$route.params.filter === 'favourite'">
+      <div v-if="this.project.favourite === true" class="project-card" @click="handleClick">
+        <router-link :to="{ name: 'instructions'}">
+          <h3>{{ project.commonName}}</h3>
+          <p>Season: {{ project.growingSeason }}</p>
+          <p>Grow Time: {{ project.growTime }}</p>
+        </router-link>
+        <button v-if="project.favourite === false" type="button" name="favourite" @click="handleUpdate(project._id, project)">Add to Fav</button>
+        <button v-if="project.favourite === true" type="button" name="favourite" @click="handleUpdate(project._id, project)">Remove from Fav</button>
+      </div>
+    </div>
+
   </div>
 
 </template>

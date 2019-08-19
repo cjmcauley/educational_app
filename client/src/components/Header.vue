@@ -1,6 +1,7 @@
 <template lang="html">
 <header>
   <h1>Home</h1>
+  <router-link :to="{ name: 'projects', params: { filter: 'favourite' } }">Favourites</router-link>
 </header>
 </template>
 
