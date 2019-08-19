@@ -2,7 +2,7 @@
   <header>
     <div class="wrapper">
 
-      <router-link :to="{ name: 'home'}"><v-img class="logo" src="@/assets/elements/logo.png"></v-img><h1>Grow It!</h1></router-link>
+      <router-link :to="{ name: 'home'}"><v-img class="logo" src="@/assets/elements/logo.png"></v-img><h1 class="header">Grow It!</h1></router-link>
       <router-link :to="{ name: 'projects', params: { filter: 'favourite' } }">Favourites</router-link>
       <router-link :to="{ name: 'projects', params: {filter: 'progress'} }">In progress</router-link>
     </div>
@@ -24,11 +24,11 @@ export default {
 }
 header{
   background-color: #E8B662;
-  padding: 20px 5px;
+  padding: 10px 5px;
   color: white;
 }
 router-link {
-  align-content: center;
+  align-items: center;
 }
 h1{
   float: left;
@@ -40,10 +40,14 @@ h1{
   height: auto;
   align: center;
 }
-a{
-  text-decoration: underline #7FCBB0;
+.header{
+  font-size: 66px;
+
+}
+a {
+  text-decoration: none;
   color: white;
-  font-size: 46px;
+  font-size: 26px;
   font-family: sofia-pro, sans-serif;
   font-weight: 400;
 }

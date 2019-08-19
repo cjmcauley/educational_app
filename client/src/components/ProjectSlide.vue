@@ -1,7 +1,7 @@
 <template lang="html">
   <v-card v-if="project" flat>
     <v-card-title>
-     <h1 v-if="project.commonName">How to grow your own {{ project.commonName }}</h1>
+     <h1 class="project-header" v-if="project.commonName">How to grow your own {{ project.commonName }}</h1>
    </v-card-title>
     <v-tabs v-model="tabs" background-color="transparent" centered>
       <v-tab v-for="header in headers" :key="header">
@@ -125,6 +125,10 @@ export default {
 .last-slide-image {
   width: 10%;
   height: auto;
+}
+.project-header{
+  font-family: chaloops, sans-serif;
+  padding: 15px 0px;
 }
 
 </style>
