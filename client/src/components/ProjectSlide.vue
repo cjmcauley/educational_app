@@ -1,5 +1,5 @@
 <template lang="html">
-  <v-card v-if="project">
+  <v-card v-if="project" flat>
     <v-card-title>
      <h1 v-if="project.commonName">How to grow your own {{ project.commonName }}</h1>
    </v-card-title>
@@ -11,7 +11,7 @@
 
     <v-tabs-items v-model="tabs">
 
-      <v-tab-item>
+      <v-tab-item v-if="project !== null">
         <v-card flat>
           <v-img class="slide-image" src="@/assets/Illustrations/Artboard5.png"></v-img>
           <v-card-text>
@@ -23,7 +23,6 @@
               <li v-if="project.steps[0][4]">{{ project.steps[0][4] }}</li>
               <li v-if="project.steps[0][5]">{{ project.steps[0][5] }}</li>
               <li v-if="project.steps[0][6]">{{ project.steps[0][6] }}</li>
-
             </ul>
           </v-card-text>
         </v-card>
@@ -91,7 +90,7 @@ export default {
   name: 'instructions',
   data () {
     return {
-      project: [],
+      project: null,
       headers: ['Before You Start', 'Step 1', 'Step 2', 'Step 3', 'Step 4', 'Step 5', 'Step 6' ],
       tabs: null
     }
