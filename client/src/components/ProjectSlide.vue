@@ -1,8 +1,8 @@
 <template lang="html">
   <v-card v-if="project" flat>
     <v-card-title class="text-center justify-center py-6">
-     <h1 class="project-header" v-if="project.commonName">How to grow your own {{ project.commonName }}</h1>
-   </v-card-title>
+      <h1 class="project-header"  v-if="project.commonName">How to grow your own {{ project.commonName }}</h1>
+    </v-card-title>
     <v-tabs class="tabs" v-model="tabs" background-color="transparent" color="#EA7E51" centered fixed-tabs>
       <v-tab v-for="header in headers" :key="header">
         {{ header }}
@@ -12,10 +12,10 @@
     <v-tabs-items v-model="tabs">
 
       <v-tab-item v-if="project !== null">
-        <v-card flat>
+        <v-card align="center" flat>
           <v-img class="slide-image" src="@/assets/Illustrations/Artboard10.png"></v-img>
           <v-card-text>
-            <h1>You Will Need:</h1>
+            <h2 class="tools">You Will Need:</h2>
             <ul>
               <li v-if="project.steps[0][0]">{{ project.steps[0][0] }}</li>
               <li v-if="project.steps[0][1]">{{ project.steps[0][1] }}</li>
@@ -30,7 +30,7 @@
       </v-tab-item>
 
       <v-tab-item>
-        <v-card flat>
+        <v-card align="center" flat>
           <v-img class="slide-image" src="@/assets/Illustrations/Artboard9.png"></v-img>
           <v-card-text>
             {{ project.steps[1] }}
@@ -39,16 +39,16 @@
       </v-tab-item>
 
       <v-tab-item>
-        <v-card flat>
+        <v-card align="center" flat>
           <v-img class="slide-image" src="@/assets/Illustrations/Artboard6.png"></v-img>
-            <v-card-text>
+          <v-card-text>
             {{ project.steps[2] }}
           </v-card-text>
         </v-card>
       </v-tab-item>
 
       <v-tab-item>
-        <v-card flat>
+        <v-card align="center" flat>
           <v-img class="slide-image" src="@/assets/Illustrations/Artboard2.png"></v-img>
           <v-card-text>
             {{ project.steps[3] }}
@@ -57,8 +57,8 @@
       </v-tab-item>
 
       <v-tab-item>
-        <v-card flat>
-            <v-img class="slide-image" src="@/assets/Illustrations/Artboard5.png"></v-img>
+        <v-card align="center" flat>
+          <v-img class="slide-image" src="@/assets/Illustrations/Artboard5.png"></v-img>
           <v-card-text>
             {{ project.steps[4] }}
           </v-card-text>
@@ -66,8 +66,8 @@
       </v-tab-item>
 
       <v-tab-item>
-        <v-card flat>
-            <v-img class="slide-image" src="@/assets/Illustrations/Artboard3.png"></v-img>
+        <v-card align="center" flat>
+          <v-img class="slide-image" src="@/assets/Illustrations/Artboard3.png"></v-img>
           <v-card-text>
             {{ project.steps[5] }}
           </v-card-text>
@@ -75,8 +75,8 @@
       </v-tab-item>
 
       <v-tab-item>
-        <v-card flat>
-            <v-img class="slide-image" src="@/assets/Illustrations/Artboard8.png"></v-img>
+        <v-card align="center" flat>
+          <v-img class="slide-image" src="@/assets/Illustrations/Artboard8.png"></v-img>
           <v-card-text>
             {{ project.steps[6] }}
           </v-card-text>
@@ -85,17 +85,29 @@
 
       <v-tab-item>
         <v-card flat>
-          <router-link :to="{ name: 'home'}">
-          <v-img class="last-slide-image" src="@/assets/elements/congrats.png"></v-img>
-        </router-link>
-          <v-card-text>
-            Congratulations !
-          </v-card-text>
-        </v-card>
-      </v-tab-item>
 
-    </v-tabs-items>
-  </v-card>
+          <v-img class="last-slide-image" src="@/assets/elements/congrats.png"></v-img>
+          <div>
+            <v-row :align="vertical" no-gutters>
+              <v-card tile>
+                Congratulations !
+                <br>
+                <router-link :to="{ name: 'home'}">Go back home</router-link>
+                <router-link :to="{ name: 'projects', params: { filter: 'show-all'}}">Start a new project</router-link>
+              </v-card>
+              <v-card outlined tile>
+                Rate the Project
+              </v-card>
+            </v-col>
+          </v-row>
+        </div>
+
+
+      </v-card>
+    </v-tab-item>
+
+  </v-tabs-items>
+</v-card>
 
 </template>
 
@@ -125,6 +137,10 @@ export default {
 
 <style lang="css" scoped>
 
+.tools{
+  font-size: 22px;
+  padding-bottom: 15px;
+}
 .tabs{
   font-family: sofia-pro, sans-serif;
   font-size: 45px;
@@ -132,12 +148,21 @@ export default {
 .v-tab{
   font-size: 16px;
 }
+.v-card__text{
+  font-family: sofia-pro, sans-serif;
+  font-size: 25px;
+  width: 60%;
+
+}
+.v-card__title{
+  align-content: center;
+}
 .slide-image {
   height: auto;
   width: 40%;
 }
 .last-slide-image {
-  width: 10%;
+  width: 20%;
   height: auto;
 }
 .project-header{
@@ -146,7 +171,6 @@ export default {
 }
 .v-card-text{
   font-family: sofia-pro, sans-serif;
-  font-size: 45px;
 }
 ul li{
   display: inline;
@@ -154,7 +178,8 @@ ul li{
 }
 li {
   font-family: sofia-pro, sans-serif;
-  font-size: 25px;
+  font-size: 22px;
+  text-decoration: underline #E8B662;
 }
 
 </style>
