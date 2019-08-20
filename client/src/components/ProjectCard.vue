@@ -8,13 +8,13 @@
             <p>Season: {{ project.growingSeason }}</p>
             <p>Grow Time: {{ project.growTime }}</p>
           </router-link>
-          <v-row justify="center">
+          <div class="button-flex">
           <button v-if="project.favourite === false" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#E8B662">mdi-star-outline</v-icon></button>
           <button v-if="project.favourite === true" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#E8B662">mdi-star</v-icon></button>
-          <button v-if="project.inProgress === false" type="button" name="progress" @click="handleProgress(project._id, project)" ><v-icon large color="#FF8073">mdi-flower-tulip-outline</v-icon></button>
+          <button v-if="project.inProgress === false" type="button" name="progress" @click="handleProgress(project._id, project)"><v-icon large color="#FF8073">mdi-flower-tulip-outline</v-icon></button>
           <button v-if="project.inProgress === true" type="button" name="progress"
           @click="handleProgress(project._id, project)"><v-icon large color="#FF8073">mdi-flower-tulip</v-icon></button>
-        </v-row>
+        </div>
         </div>
       </div>
 
@@ -25,13 +25,14 @@
             <p>Season: {{ project.growingSeason }}</p>
             <p>Grow Time: {{ project.growTime }}</p>
           </router-link>
+          <div class="button-flex">
           <button v-if="project.favourite === false" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#E8B662">mdi-star-outline</v-icon></button>
           <button v-if="project.favourite === true" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#E8B662">mdi-star</v-icon></button>
 
           <button v-if="project.inProgress === false" type="button" name="progress" @click="handleProgress(project._id, project)" ><v-icon large color="#FF8073">mdi-flower-tulip-outline</v-icon></button>
           <button v-if="project.inProgress === true" type="button" name="progress"
           @click="handleProgress(project._id, project)"><v-icon large color="#FF8073">mdi-flower-tulip</v-icon></button>
-
+        </div>
         </div>
       </div>
 
@@ -42,12 +43,13 @@
             <p>Season: {{ project.growingSeason }}</p>
             <p>Grow Time: {{ project.growTime }}</p>
           </router-link>
+          <div class="button-flex">
           <button v-if="project.favourite === false" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#E8B662">mdi-star-outline</v-icon></button>
           <button v-if="project.favourite === true" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#E8B662">mdi-star</v-icon></button>
           <button v-if="project.inProgress === false" type="button" name="progress" @click="handleProgress(project._id, project)" ><v-icon large color="#FF8073">mdi-flower-tulip-outline</v-icon></button>
           <button v-if="project.inProgress === true" type="button" name="progress"
           @click="handleProgress(project._id, project)"><v-icon large color="#FF8073">mdi-flower-tulip</v-icon></button>
-
+        </div>
         </div>
       </div>
 
@@ -58,12 +60,13 @@
             <p>Season: {{ project.growingSeason }}</p>
             <p>Grow Time: {{ project.growTime }}</p>
           </router-link>
+          <div class="button-flex">
           <button v-if="project.favourite === false" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#E8B662">mdi-star-outline</v-icon></button>
           <button v-if="project.favourite === true" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#E8B662">mdi-star</v-icon></button>
           <button v-if="project.inProgress === false" type="button" name="progress" @click="handleProgress(project._id, project)" ><v-icon large color="#FF8073">mdi-flower-tulip-outline</v-icon></button>
           <button v-if="project.inProgress === true" type="button" name="progress"
           @click="handleProgress(project._id, project)"><v-icon large color="#FF8073">mdi-flower-tulip</v-icon></button>
-
+        </div>
         </div>
       </div>
 
@@ -74,12 +77,13 @@
             <p>Season: {{ project.growingSeason }}</p>
             <p>Grow Time: {{ project.growTime }}</p>
           </router-link>
+          <div class="button-flex">
           <button v-if="project.favourite === false" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#E8B662">mdi-star-outline</v-icon></button>
           <button v-if="project.favourite === true" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#E8B662">mdi-star</v-icon></button>
           <button v-if="project.inProgress === false" type="button" name="progress" @click="handleProgress(project._id, project)" ><v-icon large color="#FF8073">mdi-flower-tulip-outline</v-icon></button>
           <button v-if="project.inProgress === true" type="button" name="progress"
           @click="handleProgress(project._id, project)"><v-icon large color="#FF8073">mdi-flower-tulip</v-icon></button>
-
+        </div>
         </div>
       </div>
 
@@ -91,11 +95,13 @@
           <p>Season: {{ project.growingSeason }}</p>
           <p>Grow Time: {{ project.growTime }}</p>
         </router-link>
+        <div class="button-flex">
         <button v-if="project.favourite === false" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#E8B662">mdi-star-outline</v-icon></button>
         <button v-if="project.favourite === true" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#E8B662">mdi-star</v-icon></button>
         <button v-if="project.inProgress === false" type="button" name="progress" @click="handleProgress(project._id, project)" ><v-icon large color="#FF8073">mdi-flower-tulip-outline</v-icon></button>
         <button v-if="project.inProgress === true" type="button" name="progress"
         @click="handleProgress(project._id, project)"><v-icon large color="#FF8073">mdi-flower-tulip</v-icon></button>
+      </div>
       </div>
     </div>
 
@@ -107,11 +113,13 @@
         <p>Season: {{ project.growingSeason }}</p>
         <p>Grow Time: {{ project.growTime }}</p>
       </router-link>
+      <div class="button-flex">
       <button v-if="project.favourite === false" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#E8B662">mdi-star-outline</v-icon></button>
       <button v-if="project.favourite === true" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#E8B662">mdi-star</v-icon></button>
       <button v-if="project.inProgress === false" type="button" name="progress" @click="handleProgress(project._id, project)" ><v-icon large color="#FF8073">mdi-flower-tulip-outline</v-icon></button>
       <button v-if="project.inProgress === true" type="button" name="progress"
       @click="handleProgress(project._id, project)"><v-icon large color="#FF8073">mdi-flower-tulip</v-icon></button>
+    </div>
     </div>
    </div>
 
@@ -157,10 +165,20 @@ export default {
 
   .project-card {
     background-color: #7FCBB0;
-    /* border: 5px double white; */
+    /* justify-content: space-between; */
+    /* flex-direction: column; */
+    /* display: flex; */
+    display: table;
+    /* text-align: center; */
     border-radius: 25px;
     padding: 15px;
     margin: 10px;
+    opacity: 0.7;
+    display: flex;
+    width: 40vh;
+    flex-direction: column;
+    height: 40vh;
+    justify-content: space-between;
   }
 
   h3 {
@@ -168,6 +186,7 @@ export default {
     font-family: chaloops, sans-serif;
     font-weight: 600;
     font-style: normal;
+    font-size: 36px;
   }
 
   p {
@@ -175,9 +194,24 @@ export default {
     font-family: sofia-pro, sans-serif;
     font-weight: 400;
     font-style: italic;
+    font-size: 24px;
   }
 
   a {
     text-decoration: none;
   }
+
+  .project-card:hover {
+    opacity: 1.0;
+    filter:alpha(opacity=100);
+  }
+
+  .button-flex button {
+    /* display: flex; */
+    /* position: sticky; */
+    display: table-cell;
+    vertical-align: bottom;
+    margin-bottom: 5px;
+  }
+
 </style>
