@@ -40,7 +40,10 @@ export default {
 
 .grid {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 </style>
