@@ -87,6 +87,7 @@
         <v-card flat>
 
           <v-img class="last-slide-image" src="@/assets/elements/congrats.png"></v-img>
+
           <div>
             <v-row :align="vertical" no-gutters>
               <v-card tile>
@@ -101,8 +102,6 @@
             </v-col>
           </v-row>
         </div>
-
-
       </v-card>
     </v-tab-item>
 
