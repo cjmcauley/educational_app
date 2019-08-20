@@ -31,6 +31,7 @@
 
       <v-tab-item>
         <v-card flat>
+          <v-img class="slide-image" src="@/assets/Illustrations/Artboard9.png"></v-img>
           <v-card-text>
             {{ project.steps[1] }}
           </v-card-text>
@@ -39,6 +40,7 @@
 
       <v-tab-item>
         <v-card flat>
+          <v-img class="slide-image" src="@/assets/Illustrations/Artboard6.png"></v-img>
             <v-card-text>
             {{ project.steps[2] }}
           </v-card-text>
@@ -47,6 +49,7 @@
 
       <v-tab-item>
         <v-card flat>
+          <v-img class="slide-image" src="@/assets/Illustrations/Artboard2.png"></v-img>
           <v-card-text>
             {{ project.steps[3] }}
           </v-card-text>
@@ -55,6 +58,7 @@
 
       <v-tab-item>
         <v-card flat>
+            <v-img class="slide-image" src="@/assets/Illustrations/Artboard5.png"></v-img>
           <v-card-text>
             {{ project.steps[4] }}
           </v-card-text>
@@ -63,6 +67,7 @@
 
       <v-tab-item>
         <v-card flat>
+            <v-img class="slide-image" src="@/assets/Illustrations/Artboard3.png"></v-img>
           <v-card-text>
             {{ project.steps[5] }}
           </v-card-text>
@@ -71,6 +76,7 @@
 
       <v-tab-item>
         <v-card flat>
+            <v-img class="slide-image" src="@/assets/Illustrations/Artboard8.png"></v-img>
           <v-card-text>
             {{ project.steps[6] }}
           </v-card-text>
@@ -145,6 +151,10 @@ export default {
 ul li{
   display: inline;
   padding-right: 25px;
+}
+li {
+  font-family: sofia-pro, sans-serif;
+  font-size: 25px;
 }
 
 </style>
