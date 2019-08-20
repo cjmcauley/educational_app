@@ -105,6 +105,20 @@
       </v-card>
     </v-tab-item>
 
+    <v-card>
+                <v-list-item three-line>
+                  <v-list-item-content>
+                    <v-list-item-title>Congratulations !</v-list-item-title>
+
+                    <v-list-item-subtitle>Subheader</v-list-item-subtitle>
+                  </v-list-item-content>
+                  <v-list-item-avatar tile>
+                    <v-img class="last-slide-image" src="@/assets/elements/congrats.png"></v-img>
+                  </v-list-item-avatar>
+                </v-list-item>
+              </v-card>
+
+
   </v-tabs-items>
 </v-card>
 
