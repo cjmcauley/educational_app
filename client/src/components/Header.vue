@@ -3,8 +3,8 @@
     <div class="wrapper">
 
       <router-link :to="{ name: 'home'}"><v-img class="logo" src="@/assets/elements/logo.png"></v-img><h1 class="header">Grow It!</h1></router-link>
-      <router-link class="menu" :to="{ name: 'projects', params: { filter: 'favourite' } }">Favourites</router-link>
-      <router-link class="menu" :to="{ name: 'projects', params: {filter: 'progress'}  }">In progress</router-link>
+      <router-link class="menu" :to="{ name: 'projects', params: { filter: 'favourite' } }"><v-icon large color="#EA7E51">mdi-star</v-icon>Favourites</router-link>
+      <router-link class="menu" :to="{ name: 'projects', params: {filter: 'progress'}  }"><v-icon large color="#FF8073">mdi-flower-tulip</v-icon>In progress</router-link>
     </div>
   </header>
 

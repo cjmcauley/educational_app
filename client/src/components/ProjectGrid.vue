@@ -16,7 +16,6 @@ export default {
     return{
       projects: [],
       projectSelected: null,
-      // favourite: [],
       progress: []
     };
   },
