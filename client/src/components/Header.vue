@@ -3,8 +3,8 @@
     <div class="wrapper">
 
       <router-link :to="{ name: 'home'}"><v-img class="logo" src="@/assets/elements/logo.png"></v-img><h1 class="header">Grow It!</h1></router-link>
-      <router-link :to="{ name: 'projects', params: { filter: 'favourite' } }">Favourites</router-link>
-      <router-link :to="{ name: 'projects', params: {filter: 'progress'} }">In progress</router-link>
+      <router-link class="menu" :to="{ name: 'projects', params: { filter: 'favourite' } }">Favourites</router-link>
+      <router-link class="menu" :to="{ name: 'projects', params: {filter: 'progress'}  }">In progress</router-link>
     </div>
   </header>
 
@@ -42,7 +42,10 @@ h1{
 }
 .header{
   font-size: 66px;
-
+}
+.menu{
+  padding-left: 15px;
+  align-self: ;
 }
 a {
   text-decoration: none;
