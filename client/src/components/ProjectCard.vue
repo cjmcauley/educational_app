@@ -1,112 +1,94 @@
 <template lang="html">
-    <div align="center">
+  <div align="center">
 
-      <div v-if="$route.params.filter === 'indoor'">
-        <div v-if="this.project.indoor === true" class="project-card" @click="handleClick">
-          <router-link :to="{ name: 'instructions'}">
-            <h3>{{ project.commonName}}</h3>
-            <p>Season: {{ project.growingSeason }}</p>
-            <p>Grow Time: {{ project.growTime }}</p>
-          </router-link>
-          <div class="button-flex">
+    <div v-if="$route.params.filter === 'indoor'">
+      <div v-if="this.project.indoor === true" class="project-card" @click="handleClick">
+        <router-link :to="{ name: 'instructions'}">
+          <h3>{{ project.commonName}}</h3>
+          <p>Season: {{ project.growingSeason }}</p>
+          <p>Grow Time: {{ project.growTime }}</p>
+        </router-link>
+        <div class="button-flex">
           <button v-if="project.favourite === false" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#E8B662">mdi-star-outline</v-icon></button>
           <button v-if="project.favourite === true" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#E8B662">mdi-star</v-icon></button>
           <button v-if="project.inProgress === false" type="button" name="progress" @click="handleProgress(project._id, project)"><v-icon large color="#FF8073">mdi-flower-tulip-outline</v-icon></button>
           <button v-if="project.inProgress === true" type="button" name="progress"
           @click="handleProgress(project._id, project)"><v-icon large color="#FF8073">mdi-flower-tulip</v-icon></button>
         </div>
-        </div>
       </div>
+    </div>
 
-      <div v-if="$route.params.filter === 'outdoor'">
-        <div v-if="this.project.indoor === false" class="project-card" @click="handleClick">
-          <router-link :to="{ name: 'instructions'}">
-            <h3>{{ project.commonName}}</h3>
-            <p>Season: {{ project.growingSeason }}</p>
-            <p>Grow Time: {{ project.growTime }}</p>
-          </router-link>
-          <div class="button-flex">
-          <button v-if="project.favourite === false" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#E8B662">mdi-star-outline</v-icon></button>
-          <button v-if="project.favourite === true" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#E8B662">mdi-star</v-icon></button>
-
-          <button v-if="project.inProgress === false" type="button" name="progress" @click="handleProgress(project._id, project)" ><v-icon large color="#FF8073">mdi-flower-tulip-outline</v-icon></button>
-          <button v-if="project.inProgress === true" type="button" name="progress"
-          @click="handleProgress(project._id, project)"><v-icon large color="#FF8073">mdi-flower-tulip</v-icon></button>
-        </div>
-        </div>
-      </div>
-
-      <div v-if="$route.params.filter === 'edible'">
-        <div v-if="this.project.edible === true" class="project-card" @click="handleClick">
-          <router-link :to="{ name: 'instructions'}">
-            <h3>{{ project.commonName}}</h3>
-            <p>Season: {{ project.growingSeason }}</p>
-            <p>Grow Time: {{ project.growTime }}</p>
-          </router-link>
-          <div class="button-flex">
-          <button v-if="project.favourite === false" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#E8B662">mdi-star-outline</v-icon></button>
-          <button v-if="project.favourite === true" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#E8B662">mdi-star</v-icon></button>
-          <button v-if="project.inProgress === false" type="button" name="progress" @click="handleProgress(project._id, project)" ><v-icon large color="#FF8073">mdi-flower-tulip-outline</v-icon></button>
-          <button v-if="project.inProgress === true" type="button" name="progress"
-          @click="handleProgress(project._id, project)"><v-icon large color="#FF8073">mdi-flower-tulip</v-icon></button>
-        </div>
-        </div>
-      </div>
-
-      <div v-if="$route.params.filter === 'not-edible'">
-        <div v-if="this.project.edible === false" class="project-card" @click="handleClick">
-          <router-link :to="{ name: 'instructions'}">
-            <h3>{{ project.commonName}}</h3>
-            <p>Season: {{ project.growingSeason }}</p>
-            <p>Grow Time: {{ project.growTime }}</p>
-          </router-link>
-          <div class="button-flex">
-          <button v-if="project.favourite === false" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#E8B662">mdi-star-outline</v-icon></button>
-          <button v-if="project.favourite === true" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#E8B662">mdi-star</v-icon></button>
-          <button v-if="project.inProgress === false" type="button" name="progress" @click="handleProgress(project._id, project)" ><v-icon large color="#FF8073">mdi-flower-tulip-outline</v-icon></button>
-          <button v-if="project.inProgress === true" type="button" name="progress"
-          @click="handleProgress(project._id, project)"><v-icon large color="#FF8073">mdi-flower-tulip</v-icon></button>
-        </div>
-        </div>
-      </div>
-
-      <div v-if="$route.params.filter === 'favourite'">
-        <div v-if="this.project.favourite === true" class="project-card" @click="handleClick">
-          <router-link :to="{ name: 'instructions'}">
-            <h3>{{ project.commonName}}</h3>
-            <p>Season: {{ project.growingSeason }}</p>
-            <p>Grow Time: {{ project.growTime }}</p>
-          </router-link>
-          <div class="button-flex">
-          <button v-if="project.favourite === false" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#E8B662">mdi-star-outline</v-icon></button>
-          <button v-if="project.favourite === true" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#E8B662">mdi-star</v-icon></button>
-          <button v-if="project.inProgress === false" type="button" name="progress" @click="handleProgress(project._id, project)" ><v-icon large color="#FF8073">mdi-flower-tulip-outline</v-icon></button>
-          <button v-if="project.inProgress === true" type="button" name="progress"
-          @click="handleProgress(project._id, project)"><v-icon large color="#FF8073">mdi-flower-tulip</v-icon></button>
-        </div>
-        </div>
-      </div>
-
-      <div v-if="$route.params.filter === 'progress'">
-        <div v-if="this.project.inProgress ===true" class= "project-card"
-        @click="handleClick">
-        <router-link :to="{ name: 'instructions' }">
+    <div v-if="$route.params.filter === 'outdoor'">
+      <div v-if="this.project.indoor === false" class="project-card" @click="handleClick">
+        <router-link :to="{ name: 'instructions'}">
           <h3>{{ project.commonName}}</h3>
           <p>Season: {{ project.growingSeason }}</p>
           <p>Grow Time: {{ project.growTime }}</p>
         </router-link>
         <div class="button-flex">
-        <button v-if="project.favourite === false" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#E8B662">mdi-star-outline</v-icon></button>
-        <button v-if="project.favourite === true" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#E8B662">mdi-star</v-icon></button>
-        <button v-if="project.inProgress === false" type="button" name="progress" @click="handleProgress(project._id, project)" ><v-icon large color="#FF8073">mdi-flower-tulip-outline</v-icon></button>
-        <button v-if="project.inProgress === true" type="button" name="progress"
-        @click="handleProgress(project._id, project)"><v-icon large color="#FF8073">mdi-flower-tulip</v-icon></button>
-      </div>
+          <button v-if="project.favourite === false" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#E8B662">mdi-star-outline</v-icon></button>
+          <button v-if="project.favourite === true" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#E8B662">mdi-star</v-icon></button>
+
+          <button v-if="project.inProgress === false" type="button" name="progress" @click="handleProgress(project._id, project)" ><v-icon large color="#FF8073">mdi-flower-tulip-outline</v-icon></button>
+          <button v-if="project.inProgress === true" type="button" name="progress"
+          @click="handleProgress(project._id, project)"><v-icon large color="#FF8073">mdi-flower-tulip</v-icon></button>
+        </div>
       </div>
     </div>
 
-    <div v-if="$route.params.filter === 'show-all'">
-      <div class= "project-card"
+    <div v-if="$route.params.filter === 'edible'">
+      <div v-if="this.project.edible === true" class="project-card" @click="handleClick">
+        <router-link :to="{ name: 'instructions'}">
+          <h3>{{ project.commonName}}</h3>
+          <p>Season: {{ project.growingSeason }}</p>
+          <p>Grow Time: {{ project.growTime }}</p>
+        </router-link>
+        <div class="button-flex">
+          <button v-if="project.favourite === false" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#E8B662">mdi-star-outline</v-icon></button>
+          <button v-if="project.favourite === true" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#E8B662">mdi-star</v-icon></button>
+          <button v-if="project.inProgress === false" type="button" name="progress" @click="handleProgress(project._id, project)" ><v-icon large color="#FF8073">mdi-flower-tulip-outline</v-icon></button>
+          <button v-if="project.inProgress === true" type="button" name="progress"
+          @click="handleProgress(project._id, project)"><v-icon large color="#FF8073">mdi-flower-tulip</v-icon></button>
+        </div>
+      </div>
+    </div>
+
+    <div v-if="$route.params.filter === 'not-edible'">
+      <div v-if="this.project.edible === false" class="project-card" @click="handleClick">
+        <router-link :to="{ name: 'instructions'}">
+          <h3>{{ project.commonName}}</h3>
+          <p>Season: {{ project.growingSeason }}</p>
+          <p>Grow Time: {{ project.growTime }}</p>
+        </router-link>
+        <div class="button-flex">
+          <button v-if="project.favourite === false" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#E8B662">mdi-star-outline</v-icon></button>
+          <button v-if="project.favourite === true" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#E8B662">mdi-star</v-icon></button>
+          <button v-if="project.inProgress === false" type="button" name="progress" @click="handleProgress(project._id, project)" ><v-icon large color="#FF8073">mdi-flower-tulip-outline</v-icon></button>
+          <button v-if="project.inProgress === true" type="button" name="progress"
+          @click="handleProgress(project._id, project)"><v-icon large color="#FF8073">mdi-flower-tulip</v-icon></button>
+        </div>
+      </div>
+    </div>
+
+    <div v-if="$route.params.filter === 'favourite'">
+      <div v-if="this.project.favourite === true" class="project-card" @click="handleClick">
+        <router-link :to="{ name: 'instructions'}">
+          <h3>{{ project.commonName}}</h3>
+          <p>Season: {{ project.growingSeason }}</p>
+          <p>Grow Time: {{ project.growTime }}</p>
+        </router-link>
+        <div class="button-flex">
+          <button v-if="project.favourite === false" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#E8B662">mdi-star-outline</v-icon></button>
+          <button v-if="project.favourite === true" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#E8B662">mdi-star</v-icon></button>
+          <button v-if="project.inProgress === false" type="button" name="progress" @click="handleProgress(project._id, project)" ><v-icon large color="#FF8073">mdi-flower-tulip-outline</v-icon></button>
+          <button v-if="project.inProgress === true" type="button" name="progress"
+          @click="handleProgress(project._id, project)"><v-icon large color="#FF8073">mdi-flower-tulip</v-icon></button>
+        </div>
+      </div>
+    </div>
+
+    <div v-if="$route.params.filter === 'progress'">
+      <div v-if="this.project.inProgress ===true" class= "project-card"
       @click="handleClick">
       <router-link :to="{ name: 'instructions' }">
         <h3>{{ project.commonName}}</h3>
@@ -114,16 +96,34 @@
         <p>Grow Time: {{ project.growTime }}</p>
       </router-link>
       <div class="button-flex">
+        <button v-if="project.favourite === false" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#E8B662">mdi-star-outline</v-icon></button>
+        <button v-if="project.favourite === true" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#E8B662">mdi-star</v-icon></button>
+        <button v-if="project.inProgress === false" type="button" name="progress" @click="handleProgress(project._id, project)" ><v-icon large color="#FF8073">mdi-flower-tulip-outline</v-icon></button>
+        <button v-if="project.inProgress === true" type="button" name="progress"
+        @click="handleProgress(project._id, project)"><v-icon large color="#FF8073">mdi-flower-tulip</v-icon></button>
+      </div>
+    </div>
+  </div>
+
+  <div v-if="$route.params.filter === 'show-all'">
+    <div class= "project-card"
+    @click="handleClick">
+    <router-link :to="{ name: 'instructions' }">
+      <h3>{{ project.commonName}}</h3>
+      <p>Season: {{ project.growingSeason }}</p>
+      <p>Grow Time: {{ project.growTime }}</p>
+    </router-link>
+    <div class="button-flex">
       <button v-if="project.favourite === false" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#E8B662">mdi-star-outline</v-icon></button>
       <button v-if="project.favourite === true" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#E8B662">mdi-star</v-icon></button>
       <button v-if="project.inProgress === false" type="button" name="progress" @click="handleProgress(project._id, project)" ><v-icon large color="#FF8073">mdi-flower-tulip-outline</v-icon></button>
       <button v-if="project.inProgress === true" type="button" name="progress"
       @click="handleProgress(project._id, project)"><v-icon large color="#FF8073">mdi-flower-tulip</v-icon></button>
     </div>
-    </div>
-   </div>
-
   </div>
+</div>
+
+</div>
 
 </template>
 
