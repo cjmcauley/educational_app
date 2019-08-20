@@ -1,9 +1,9 @@
 <template lang="html">
   <v-card v-if="project" flat>
-    <v-card-title>
+    <v-card-title class="text-center justify-center py-6">
      <h1 class="project-header" v-if="project.commonName">How to grow your own {{ project.commonName }}</h1>
    </v-card-title>
-    <v-tabs v-model="tabs" background-color="transparent" centered>
+    <v-tabs class="tabs" v-model="tabs" background-color="transparent" color="#EA7E51" centered fixed-tabs>
       <v-tab v-for="header in headers" :key="header">
         {{ header }}
       </v-tab>
@@ -118,6 +118,14 @@ export default {
 
 <style lang="css" scoped>
 
+.tabs{
+  font-family: sofia-pro, sans-serif;
+  font-size: 45px;
+}
+.v-tab{
+  font-size: 16px;
+
+}
 .slide-image {
   height: auto;
   width: 40%;
@@ -129,6 +137,10 @@ export default {
 .project-header{
   font-family: chaloops, sans-serif;
   padding: 15px 0px;
+}
+.v-card-text{
+  font-family: sofia-pro, sans-serif;
+  font-size: 45px;
 }
 
 </style>
