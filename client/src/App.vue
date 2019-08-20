@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-    <web-header />
+ <web-header />
     <router-view></router-view>
     <!-- <web-footer /> -->
   </div>
@@ -20,7 +20,6 @@ export default {
     'project-card': ProjectCard,
     'web-footer': Footer
   }
-}
 </script>
 
 <style lang="css">
