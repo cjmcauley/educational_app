@@ -173,7 +173,7 @@ export default {
     border-radius: 25px;
     padding: 15px;
     margin: 10px;
-    opacity: 0.7;
+    opacity: 1.0;
     display: flex;
     width: 40vh;
     flex-direction: column;
@@ -202,7 +202,7 @@ export default {
   }
 
   .project-card:hover {
-    opacity: 1.0;
+    opacity: 0.7;
     filter:alpha(opacity=100);
   }
 
