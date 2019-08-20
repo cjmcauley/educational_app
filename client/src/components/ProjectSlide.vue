@@ -15,6 +15,7 @@
         <v-card flat>
           <v-img class="slide-image" src="@/assets/Illustrations/Artboard10.png"></v-img>
           <v-card-text>
+            <h1>You Will Need:</h1>
             <ul>
               <li v-if="project.steps[0][0]">{{ project.steps[0][0] }}</li>
               <li v-if="project.steps[0][1]">{{ project.steps[0][1] }}</li>
@@ -124,7 +125,6 @@ export default {
 }
 .v-tab{
   font-size: 16px;
-
 }
 .slide-image {
   height: auto;
@@ -141,6 +141,10 @@ export default {
 .v-card-text{
   font-family: sofia-pro, sans-serif;
   font-size: 45px;
+}
+ul li{
+  display: inline;
+  padding-right: 25px;
 }
 
 </style>
