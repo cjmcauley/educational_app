@@ -53,6 +53,8 @@ colour: #7FCBB0;
   display: flex;
   justify-content: space-evenly;
   width: 100vw;
+
+
 }
 
 .menu > div {
@@ -68,7 +70,13 @@ colour: #7FCBB0;
   text-align: center;
   color: #7FCBB0;
   font-family: chaloops, sans-serif;
+  opacity: 0.7;
 
+}
+
+.menu > div:hover {
+  opacity: 1.0;
+  filter: alpha(opacity=100);
 }
 
 a {
@@ -89,6 +97,12 @@ a {
   font-family: chaloops, sans-serif;
   border-radius: 25px;
   color: white;
+  opacity: 0.7;
+}
+
+.show-all:hover {
+  opacity: 1.0;
+  filter: alpha(opacity=100);
 }
 
 .link-all {
