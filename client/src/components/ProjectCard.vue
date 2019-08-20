@@ -155,8 +155,10 @@ export default {
 
   .project-card {
     background-color: #7FCBB0;
+    border: 5px double white;
     padding: 5px;
     margin: 5px;
+
   }
 
 </style>

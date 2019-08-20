@@ -1,24 +1,21 @@
 <template lang="html">
   <div>
-    <web-header />
+ <web-header />
     <router-view></router-view>
-  </div>
+   </div>
 
 </template>
 
 <script>
 import ProjectService from './services/ProjectService.js';
 import Header from './components/Header.vue';
-import { eventBus } from './main.js';
-import ProjectCard from './components/ProjectCard.vue';
 
 export default {
   name: 'app',
   components: {
-    'web-header': Header,
-    'project-card': ProjectCard
+    'web-header': Header
   }
-}
+  }
 </script>
 
 <style lang="css">
