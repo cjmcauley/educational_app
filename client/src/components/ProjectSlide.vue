@@ -1,8 +1,8 @@
 <template lang="html">
   <v-card v-if="project" flat>
-    <v-card-title class="text-center justify-center py-6">
+    <div align="center">
       <h1 class="project-header">How to grow your own {{ project.commonName }}!</h1>
-    </v-card-title>
+  </div>
     <v-tabs class="tabs" v-model="tabs" background-color="transparent" color="#EA7E51" centered fixed-tabs>
       <v-tab v-for="header in headers" :key="header">
         {{ header }}
@@ -83,55 +83,32 @@
         </v-card>
       </v-tab-item>
 
- <v-tab-item>
-      <!-- <v-card flat>
+      <v-tab-item>
 
-      <v-img class="last-slide-image" src="@/assets/elements/congrats.png"></v-img>
 
-      <div>
-      <v-row :align="vertical" no-gutters>
-      <v-card tile>
-      Congratulations !
-      <br>
-      <router-link :to="{ name: 'home'}">Go back home</router-link>
-      <router-link :to="{ name: 'projects', params: { filter: 'show-all'}}">Start a new project</router-link>
-    </v-card>
-    <v-card outlined tile>
-    Rate the Project
+        <v-card max-width="80%" class="mx-auto justify-center" flat>
+          <v-list-item three-line>
+            <v-list-item-content>
+              <v-list-item-title class="list-item-header">Congratulations !</v-list-item-title>
+              <v-list-item-subtitle class="instructions">Would you like to:</v-list-item-subtitle>
+              <v-list-item-subtitle class="instructions"><router-link class="instruction-header" :to="{ name: 'home'}">Go back home</router-link></v-list-item-subtitle>
+              <v-list-item-subtitle class="instructions"><router-link class="instruction-header" :to="{ name: 'projects', params: { filter: 'show-all'}}">Start a new project</router-link></v-list-item-subtitle>
+              <v-list-item-subtitle class="instructions">Rate this Project</v-list-item-subtitle>
+              <v-rating background-color="white" color="#E8B662" dense hover size="33"></v-rating>
+            </v-list-item-content>
+            <v-img class="shrink"
+            height="400"
+            width="200"
+            src="@/assets/elements/congrats.png"
+            ></v-img>
+          </v-list-item>
+          <v-img class="last-slide-image" ></v-img>
+        </v-card>
+      </v-tab-item>
+
+
+    </v-tabs-items>
   </v-card>
-</v-col>
-</v-row>
-</div>
-</v-card> -->
-
-<v-card class="mx-auto" flat>
-  <v-list-item three-line>
-    <v-list-item-content>
-      <v-list-item-title class="list-item-header">Congratulations !</v-list-item-title>
-      <v-list-item-subtitle class="instructions">Would you like to:</v-list-item-subtitle>
-      <v-list-item-subtitle class="instructions"><router-link :to="{ name: 'home'}">Go back home</router-link></v-list-item-subtitle>
-      <v-list-item-subtitle class="instructions"><router-link :to="{ name: 'projects', params: { filter: 'show-all'}}">Start a new project</router-link></v-list-item-subtitle>
-      <v-card-actions>
-        <v-list-item-subtitle class="instructions">Rate this Project</v-list-item-subtitle>
-        <v-spacer></v-spacer>
-        <span class="grey--text text--lighten-2 caption mr-2">
-        </span>
-        <v-rating background-color="white" color="#E8B662" dense hover size="38"></v-rating>
-      </v-card-actions>
-    </v-list-item-content>
-    <v-img class="shrink"
-          height="400"
-          width="200"
-          src="@/assets/elements/congrats.png"
-        ></v-img>
-  </v-list-item>
-  <v-img class="last-slide-image" ></v-img>
-</v-card>
-</v-tab-item>
-
-
-</v-tabs-items>
-</v-card>
 
 </template>
 
@@ -172,7 +149,10 @@ export default {
 .instructions{
   font-family: sofia-pro, sans-serif;
   font-size: 25px;
-
+}
+.instruction-header{
+  color: inherit;
+  text-decoration: underline #E8B662;
 }
 .list-item-header{
   font-size: 48px;
@@ -200,7 +180,8 @@ export default {
 }
 .project-header{
   font-family: chaloops, sans-serif;
-  padding: 15px 0px;
+  padding: 5px 0px;
+  font-size: 48px;
 }
 .v-card-text{
   font-family: sofia-pro, sans-serif;
