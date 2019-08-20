@@ -47,7 +47,7 @@ p {
   font-family: chaloops, sans-serif;
 font-weight: 600;
 font-style: normal;
-colour: #7FCBB0;
+color: #7FCBB0;
 font-size: 20px;
 }
 
