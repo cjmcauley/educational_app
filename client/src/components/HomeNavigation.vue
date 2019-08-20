@@ -1,25 +1,30 @@
 <template lang="html">
-  <div>
-    <h1 align="center">App Name</h1>
-    <p align="center">some text about the app and plants and kids and whatnot</p>
-    <div class="wrapper">
+  <div align="center">
+    <h1 align="center">Grow it!</h1>
+    <p align="center">The worlds best gardening app for children</p>
 
+
+    <div class="menu">
       <div class="indoor">
-        <router-link :to="{ name: 'projects', params: { filter: 'indoor' } }">Indoor</router-link>
+        <router-link class="link-text" :to="{ name: 'projects', params: { filter: 'indoor' } }"> <v-img class="img" src="@/assets/icons/indoor.png"></v-img>Indoor</router-link>
       </div>
       <div class="outdoor">
-        <router-link :to="{ name: 'projects', params: { filter: 'outdoor' } }">Outdoor</router-link>
+        <router-link class="link-text" :to="{ name: 'projects', params: { filter: 'outdoor' } }"><v-img class="img" src="@/assets/icons/outdoor.png"></v-img>Outdoor</router-link>
       </div>
       <div class="edible">
-        <router-link :to="{ name: 'projects', params: { filter: 'edible' } }">Edible</router-link>
+        <router-link class="link-text" :to="{ name: 'projects', params: { filter: 'edible' } }"><v-img class="img" src="@/assets/icons/edible.png"></v-img>Edible</router-link>
       </div>
       <div class="not-edible">
-        <router-link :to="{ name: 'projects', params: { filter: 'not-edible' } }">Not-edible</router-link>
+        <router-link class="link-text" :to="{ name: 'projects', params: { filter: 'not-edible' } }"><v-img class="img" src="@/assets/icons/non-edible.png"></v-img>Not-edible</router-link>
       </div>
     </div>
-    <div class="show-all">
-      <router-link :to="{ name: 'projects', params: { filter: 'show-all'}}">Show All</router-link>
+
+    <router-link class="link-all" :to="{ name: 'projects', params: { filter: 'show-all'}}">
+
+    <div  class="show-all">
+      <h4>Show All</h4>
     </div>
+  </router-link>
   </div>
 </template>
 
@@ -30,12 +35,63 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.wrapper {
-  width: 60%;
-  padding-top: 40px;
-  display: grid;
-  margin: 0 auto;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
+h1 {
+  font-family: chaloops, sans-serif;
+font-weight: 600;
+font-style: normal;
+color: #7FCBB0;
+}
+
+p {
+  font-family: chaloops, sans-serif;
+font-weight: 600;
+font-style: normal;
+colour: #7FCBB0;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100vw;
+}
+
+.menu > div {
+  width: 20%;
+  text-align: center;
+  border: 5px solid #7FCBB0;
+  border-radius: 25px;
+  display: block;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  font-size: 23px;
+  cursor: pointer;
+  text-align: center;
+  color: #7FCBB0;
+  font-family: chaloops, sans-serif;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+.link-text {
+  color: #7FCBB0;
+}
+
+.show-all {
+  width: 93%;
+  background-color: #7FCBB0;
+  padding: 14px 28px;
+  font-size: 23px;
+  cursor: pointer;
+  text-align: center;
+  font-family: chaloops, sans-serif;
+  border-radius: 25px;
+  color: white;
+}
+
+.link-all {
+  color: white;
 }
 </style>
