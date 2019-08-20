@@ -39,6 +39,7 @@ h1 {
   font-family: chaloops, sans-serif;
 font-weight: 600;
 font-style: normal;
+font-size: 50px;
 color: #7FCBB0;
 }
 
@@ -47,6 +48,7 @@ p {
 font-weight: 600;
 font-style: normal;
 colour: #7FCBB0;
+font-size: 20px;
 }
 
 .menu {
@@ -65,7 +67,7 @@ colour: #7FCBB0;
   display: block;
   margin-bottom: 25px;
   margin-top: 25px;
-  font-size: 23px;
+  font-size: 36px;
   cursor: pointer;
   text-align: center;
   color: #7FCBB0;
@@ -91,7 +93,7 @@ a {
   width: 93%;
   background-color: #7FCBB0;
   padding: 14px 28px;
-  font-size: 23px;
+  font-size: 36px;
   cursor: pointer;
   text-align: center;
   font-family: chaloops, sans-serif;
