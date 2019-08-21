@@ -77,7 +77,7 @@ export default {
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  margin: 5% 0;
+  margin: 0% 0;
   flex-grow: 1;
   flex-wrap: wrap;
 }
@@ -88,6 +88,7 @@ font-weight: 600;
 font-style: normal;
 font-size: 50px;
 color: #000000;
+padding: 20px 0px;
 }
 
 
