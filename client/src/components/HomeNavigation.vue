@@ -43,6 +43,7 @@ h1 {
 }
 
 p {
+  padding-top: 15px;
   font-family: sofia-pro, sans-serif;
   font-weight: 400;
   color: #757575;
