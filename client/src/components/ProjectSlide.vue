@@ -124,7 +124,8 @@ export default {
     return {
       project: null,
       headers: ['Before You Start', 'Step 1', 'Step 2', 'Step 3', 'Step 4', 'Step 5', 'Step 6', 'Complete' ],
-      tabs: null
+      tabs: null,
+      rating: null
     }
   },
   props: ['projectSelected'],
