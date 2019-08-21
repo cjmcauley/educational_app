@@ -1,7 +1,6 @@
 <template lang="html">
 
   <div >
-    <h1>Projects</h1>
     <project-grid />
     <router-view id="projects"></router-view>
 
