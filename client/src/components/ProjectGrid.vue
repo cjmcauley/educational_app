@@ -39,10 +39,12 @@ export default {
 
 .grid {
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: row;
+  margin: 5% 0;
   flex-grow: 1;
   flex-wrap: wrap;
-  justify-content: space-evenly;
 }
 
 </style>

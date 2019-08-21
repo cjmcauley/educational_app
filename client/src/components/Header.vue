@@ -3,8 +3,10 @@
     <div class="wrapper">
 
       <router-link :to="{ name: 'home'}"><v-img class="logo" src="@/assets/elements/logo.png"></v-img><h1 class="header">Grow It!</h1></router-link>
-      <router-link class="menu" :to="{ name: 'projects', params: { filter: 'favourite' } }"><v-icon large color="#EA7E51">mdi-star</v-icon>Favourites</router-link>
-      <router-link class="menu" :to="{ name: 'projects', params: {filter: 'progress'}  }"><v-icon large color="#FF8073">mdi-flower-tulip</v-icon>In progress</router-link>
+      <div class="mini-menu">
+        <router-link class="menu" :to="{ name: 'projects', params: { filter: 'favourite' } }"><v-icon large color="#EA7E51">mdi-star</v-icon>Favourites</router-link>
+        <router-link class="menu" :to="{ name: 'projects', params: {filter: 'progress'}  }"><v-icon large color="#FF8073">mdi-flower-tulip</v-icon>In progress</router-link>
+      </div>
     </div>
   </header>
 
@@ -21,15 +23,17 @@ export default {
 .wrapper{
   display: flex;
   vertical-align: middle;
+  justify-content: space-between;
 }
 header{
   background-color: #E8B662;
   padding: 10px 5px;
   color: white;
+  width: 100%;
 }
-router-link {
+/* router-link {
   align-items: center;
-}
+} */
 h1{
   float: left;
   font-family: chaloops, sans-serif;
@@ -45,7 +49,8 @@ h1{
 }
 .menu{
   padding-left: 15px;
-  align-self: ;
+  float: right;
+  align: right;
 }
 a {
   text-decoration: none;
@@ -54,5 +59,11 @@ a {
   font-family: sofia-pro, sans-serif;
   font-weight: 400;
 }
+
+.mini-menu {
+  vertical-align: center;
+  padding-right: 20px;
+}
+
 
 </style>
