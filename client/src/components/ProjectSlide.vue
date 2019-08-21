@@ -94,7 +94,8 @@
               <v-list-item-subtitle class="instructions"><router-link class="instruction-header" :to="{ name: 'home'}">Go back home</router-link></v-list-item-subtitle>
               <v-list-item-subtitle class="instructions"><router-link class="instruction-header" :to="{ name: 'projects', params: { filter: 'show-all'}}">Start a new project</router-link></v-list-item-subtitle>
               <v-list-item-subtitle class="instructions">Rate this Project</v-list-item-subtitle>
-              <v-rating background-color="white" color="#E8B662" dense hover size="33"></v-rating>
+              <v-rating background-color="white" color="#E8B662" dense hover size="33"
+              v-model="project.rating"></v-rating>
             </v-list-item-content>
             <v-img class="shrink"
             height="400"
