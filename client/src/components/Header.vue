@@ -63,6 +63,9 @@ a {
 .mini-menu {
   vertical-align: center;
   padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+
 }
 
 

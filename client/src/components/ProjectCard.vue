@@ -168,6 +168,7 @@ export default {
     margin: 10px;
     opacity: 1.0;
     display: flex;
+    flex: 1 100%;
     width: 40vh;
     flex-direction: column;
     height: 40vh;
@@ -208,5 +209,7 @@ export default {
     vertical-align: bottom;
     margin-bottom: 5px;
   }
+
+
 
 </style>
