@@ -1,7 +1,6 @@
 <template lang="html">
   <div align="center">
-    <h1 align="center">Grow it!</h1>
-    <p align="center">The worlds best gardening app for children</p>
+    <p align="center">Choose what type of gardening project you would like to do</p>
 
 
     <div class="menu">
@@ -44,11 +43,10 @@ color: #7FCBB0;
 }
 
 p {
-  font-family: chaloops, sans-serif;
-font-weight: 600;
-font-style: normal;
-color: #7FCBB0;
-font-size: 20px;
+  font-size: 26px;
+  font-family: sofia-pro, sans-serif;
+  font-weight: 400;
+  color: #7FCBB0;
 }
 
 .menu {
@@ -99,11 +97,11 @@ a {
   font-family: chaloops, sans-serif;
   border-radius: 25px;
   color: white;
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .show-all:hover {
-  opacity: 1.0;
+  opacity: 0.7;
   filter: alpha(opacity=100);
 }
 
