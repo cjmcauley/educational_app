@@ -10,7 +10,7 @@ db.projects.insertMany([
     indoor: false,
     favourite: false,
     inProgress: false,
-    rating: 4,
+    rating: null,
     growTime: "50-60 days",
     description: "Courgettes are a useful crop and belong to the same family as marrows, pumpkins and summer squashes",
     steps: [ ["Gardening gloves", "Packet of courgette seeds", "Trowel", "Rake"],
