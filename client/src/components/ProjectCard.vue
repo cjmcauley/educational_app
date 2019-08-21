@@ -5,8 +5,8 @@
       <div v-if="this.project.indoor === true" class="project-card" @click="handleClick">
         <router-link :to="{ name: 'instructions'}">
           <h3>{{ project.commonName}}</h3>
-          <p>Season: {{ project.growingSeason }}</p>
-          <p>Grow Time: {{ project.growTime }}</p>
+          <p><span style="font-weight:bold">Season:</span> {{ project.growingSeason }}</p>
+          <p><span style="font-weight:bold">Grow Time:</span> {{ project.growTime }}</p>
         </router-link>
         <div class="button-flex">
           <button v-if="project.favourite === false" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#EA7E51">mdi-star-outline</v-icon></button>
@@ -22,8 +22,8 @@
       <div v-if="this.project.indoor === false" class="project-card" @click="handleClick">
         <router-link :to="{ name: 'instructions'}">
           <h3>{{ project.commonName}}</h3>
-          <p>Season: {{ project.growingSeason }}</p>
-          <p>Grow Time: {{ project.growTime }}</p>
+          <p><span style="font-weight:bold">Season:</span> {{ project.growingSeason }}</p>
+          <p><span style="font-weight:bold">Grow Time:</span> {{ project.growTime }}</p>
         </router-link>
         <div class="button-flex">
           <button v-if="project.favourite === false" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#EA7E51">mdi-star-outline</v-icon></button>
@@ -39,8 +39,8 @@
       <div v-if="this.project.edible === true" class="project-card" @click="handleClick">
         <router-link :to="{ name: 'instructions'}">
           <h3>{{ project.commonName}}</h3>
-          <p>Season: {{ project.growingSeason }}</p>
-          <p>Grow Time: {{ project.growTime }}</p>
+          <p><span style="font-weight:bold">Season:</span> {{ project.growingSeason }}</p>
+          <p><span style="font-weight:bold">Grow Time:</span> {{ project.growTime }}</p>
         </router-link>
         <div class="button-flex">
           <button v-if="project.favourite === false" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#EA7E51">mdi-star-outline</v-icon></button>
@@ -56,8 +56,8 @@
       <div v-if="this.project.edible === false" class="project-card" @click="handleClick">
         <router-link :to="{ name: 'instructions'}">
           <h3>{{ project.commonName}}</h3>
-          <p>Season: {{ project.growingSeason }}</p>
-          <p>Grow Time: {{ project.growTime }}</p>
+          <p><span style="font-weight:bold">Season:</span> {{ project.growingSeason }}</p>
+          <p><span style="font-weight:bold">Grow Time:</span> {{ project.growTime }}</p>
         </router-link>
         <div class="button-flex">
           <button v-if="project.favourite === false" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#EA7E51">mdi-star-outline</v-icon></button>
@@ -73,8 +73,8 @@
       <div v-if="this.project.favourite === true" class="project-card" @click="handleClick">
         <router-link :to="{ name: 'instructions'}">
           <h3>{{ project.commonName}}</h3>
-          <p>Season: {{ project.growingSeason }}</p>
-          <p>Grow Time: {{ project.growTime }}</p>
+          <p><span style="font-weight:bold">Season:</span> {{ project.growingSeason }}</p>
+          <p><span style="font-weight:bold">Grow Time:</span> {{ project.growTime }}</p>
         </router-link>
         <div class="button-flex">
           <button v-if="project.favourite === false" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#EA7E51">mdi-star-outline</v-icon></button>
@@ -91,8 +91,8 @@
       @click="handleClick">
       <router-link :to="{ name: 'instructions' }">
         <h3>{{ project.commonName}}</h3>
-        <p>Season: {{ project.growingSeason }}</p>
-        <p>Grow Time: {{ project.growTime }}</p>
+        <p><span style="font-weight:bold">Season:</span> {{ project.growingSeason }}</p>
+        <p><span style="font-weight:bold">Grow Time:</span> {{ project.growTime }}</p>
       </router-link>
       <div class="button-flex">
         <button v-if="project.favourite === false" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#EA7E51">mdi-star-outline</v-icon></button>
@@ -109,8 +109,8 @@
     @click="handleClick">
     <router-link :to="{ name: 'instructions' }">
       <h3>{{ project.commonName}}</h3>
-      <p>Season: {{ project.growingSeason }}</p>
-      <p>Grow Time: {{ project.growTime }}</p>
+      <p><span style="font-weight:bold">Season:</span> {{ project.growingSeason }}</p>
+      <p><span style="font-weight:bold">Grow Time:</span> {{ project.growTime }}</p>
     </router-link>
     <div class="button-flex">
       <button v-if="project.favourite === false" type="button" name="favourite" @click="handleFavourite(project._id, project)"><v-icon large color="#EA7E51">mdi-star-outline</v-icon></button>
@@ -188,6 +188,10 @@ export default {
     font-weight: 400;
     font-style: italic;
     font-size: 24px;
+  }
+
+  span {
+    font-style: bold;
   }
 
   a {
