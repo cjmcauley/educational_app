@@ -16,7 +16,7 @@
      </div>
 
      <div class="title" v-if="$route.params.filter === 'not-edible'">
-       <h1>Not-edible</h1>
+       <h1>Non-edible</h1>
      </div>
 
      <div class="title" v-if="$route.params.filter === 'show-all'">
