@@ -70,12 +70,12 @@ p {
   text-align: center;
   color: #7FCBB0;
   font-family: chaloops, sans-serif;
-  opacity: 0.7;
+  opacity: 1.0;
 
 }
 
 .menu > div:hover {
-  opacity: 1.0;
+  opacity: 0.7;
   filter: alpha(opacity=100);
 }
 
@@ -97,7 +97,7 @@ a {
   font-family: chaloops, sans-serif;
   border-radius: 25px;
   color: white;
-  opacity: 1;
+  opacity: 1.0;
 }
 
 .show-all:hover {

@@ -94,7 +94,8 @@
               <v-list-item-subtitle class="instructions"><router-link class="instruction-header" :to="{ name: 'home'}">Go back home</router-link></v-list-item-subtitle>
               <v-list-item-subtitle class="instructions"><router-link class="instruction-header" :to="{ name: 'projects', params: { filter: 'show-all'}}">Start a new project</router-link></v-list-item-subtitle>
               <v-list-item-subtitle class="instructions">Rate this Project</v-list-item-subtitle>
-              <v-rating background-color="white" color="#E8B662" dense hover size="33"></v-rating>
+              <v-rating background-color="white" color="#E8B662" dense hover size="33"
+              v-model="project.rating" @input="handleRating"></v-rating>
             </v-list-item-content>
             <v-img class="shrink"
             height="400"
@@ -116,6 +117,7 @@
 <script>
 import { eventBus } from '../main.js'
 import ProjectGrid from './ProjectGrid.vue'
+import ProjectService from '../services/ProjectService.js'
 
 export default {
   name: 'instructions',
@@ -132,6 +134,12 @@ export default {
   },
   mounted (){
     eventBus.$on('project-selected', (project) => {this.project = project})
+  },
+  methods: {
+    handleRating(number){
+      this.project.rating = number;
+      ProjectService.updateProject(this.project._id, this.project);
+    }
   }
 }
 </script>

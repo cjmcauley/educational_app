@@ -7,8 +7,9 @@ export default {
   },
 
   updateProject(id, project){
+    delete project._id;
     return fetch(baseURL + id, {
-      method: "PATCH",
+      method: "PUT",
       body: JSON.stringify(project),
       headers: {"Content-Type": "application/json"}
     })
