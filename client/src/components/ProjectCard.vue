@@ -169,10 +169,12 @@ export default {
     opacity: 1.0;
     display: flex;
     flex: 1 100%;
-    width: 40vh;
+    /* width: 40vh; */
     flex-direction: column;
-    height: 40vh;
+    /* height: 40vh; */
     justify-content: space-between;
+    height: 280px;
+    width: 265px;
   }
 
   h3 {
