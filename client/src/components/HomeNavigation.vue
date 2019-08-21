@@ -1,6 +1,5 @@
 <template lang="html">
   <div align="center">
-    <h1 align="center">Grow it!</h1>
     <p align="center">Choose what type of gardening project you would like to do!</p>
 
 
