@@ -14,7 +14,7 @@
         <router-link class="link-text" :to="{ name: 'projects', params: { filter: 'edible' } }"><v-img class="img" src="@/assets/icons/edible.png"></v-img>Edible</router-link>
       </div>
       <div class="not-edible">
-        <router-link class="link-text" :to="{ name: 'projects', params: { filter: 'not-edible' } }"><v-img class="img" src="@/assets/icons/non-edible.png"></v-img>Not-edible</router-link>
+        <router-link class="link-text" :to="{ name: 'projects', params: { filter: 'not-edible' } }"><v-img class="img" src="@/assets/icons/non-edible.png"></v-img>Non-edible</router-link>
       </div>
     </div>
 
