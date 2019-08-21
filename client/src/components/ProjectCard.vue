@@ -171,8 +171,8 @@ export default {
     flex: 1 100%;
     flex-direction: column;
     justify-content: space-between;
-    height: 350px;
-    width: 265px;
+    height: 300px;
+    width: 300px;
   }
 
   h3 {
