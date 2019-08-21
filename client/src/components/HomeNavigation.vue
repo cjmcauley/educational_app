@@ -1,7 +1,7 @@
 <template lang="html">
   <div align="center">
     <h1 align="center">Grow it!</h1>
-    <p align="center">The worlds best gardening app for children</p>
+    <p align="center">Choose what type of gardening project you would like to do!</p>
 
 
     <div class="menu">
@@ -21,10 +21,10 @@
 
     <router-link class="link-all" :to="{ name: 'projects', params: { filter: 'show-all'}}">
 
-    <div  class="show-all">
-      <h4>Show All</h4>
-    </div>
-  </router-link>
+      <div  class="show-all">
+        <h4>Show All</h4>
+      </div>
+    </router-link>
   </div>
 </template>
 
@@ -37,18 +37,17 @@ export default {
 <style lang="css" scoped>
 h1 {
   font-family: chaloops, sans-serif;
-font-weight: 600;
-font-style: normal;
-font-size: 50px;
-color: #7FCBB0;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 50px;
+  color: #000000;
 }
 
 p {
-  font-family: chaloops, sans-serif;
-font-weight: 600;
-font-style: normal;
-color: #7FCBB0;
-font-size: 20px;
+  font-family: sofia-pro, sans-serif;
+  font-weight: 400;
+  color: #757575;
+  font-size: 26px;
 }
 
 .menu {

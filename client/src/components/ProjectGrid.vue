@@ -87,7 +87,7 @@ h1 {
 font-weight: 600;
 font-style: normal;
 font-size: 50px;
-color: #7FCBB0;
+color: #000000;
 }
 
 </style>
